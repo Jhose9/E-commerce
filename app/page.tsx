@@ -1,27 +1,25 @@
 import Image from "next/image";
-import foto1 from "@/public/3084a556aa6b3f16efde44d53ba4eec3b27a3cf5-1280x1600.jpg";
-import foto2 from "@/public/62307e35e1e371dc7cfa1dfd1f50b11c1e2f4e23-800x800.jpg";
-import Zapato1 from "@/public/a9445bdbbd4554fb8ba7ef90f0a41384cb31bdf6-1728x2160.jpg";
-import Zapato2 from "@/public/edc5c980eadedce0fff9c018c2f8f26913a543cd-1728x2160.jpg";
-import Persona1 from "@/public/002f6f2cade4b4051d9ca3dc4d0b26ca0b81a023-800x800.jpg";
-import Persona2 from "@/public/a2ae0168fc770c9f403f2e3130dd01d1b538fb7c-1728x2160.jpg";
 
 import Card from "@/components/Card";
 
-import Link from 'next/link';
+import Link from "next/link";
 
-import {poppins} from '@/components/Fonts';
+import { poppins } from "@/components/Fonts";
 export default function Home() {
   return (
     <main>
       <section className="bg-[#18181B] h-[756px]">
         <div className="mb-8 flex justify-center items-center">
           <div className="ml-[350px]">
-            <h1 className={`mb-4 text-4xl font-black text-white sm:text-5xl md:mb-8 md:text-6xl w-[400px] ${poppins.className} font-black `}>
+            <h1
+              className={`mb-4 text-4xl font-black text-white sm:text-5xl md:mb-8 md:text-6xl w-[400px] ${poppins.className} font-black `}
+            >
               The best clothing at a higher price.
             </h1>
 
-            <p className={`max-w-md leading-relaxed text-gray-400 dark:text-gray-400 xl:text-lg ${poppins.className} `}>
+            <p
+              className={`max-w-md leading-relaxed text-gray-400 dark:text-gray-400 xl:text-lg ${poppins.className} `}
+            >
               We sell only the most exlusive and hight quality products for you.
               We are the best so come and shop with us.
             </p>
@@ -33,7 +31,7 @@ export default function Home() {
                 className="h-full w-full object-cover object-center"
                 height={650}
                 width={380}
-                src={foto1}
+                src="/image-3.jpg"
                 alt="foto1"
               />
             </div>
@@ -43,7 +41,7 @@ export default function Home() {
                 height={650}
                 width={380}
                 className="h-full w-full object-cover object-center"
-                src={foto2}
+                src="/image-1.jpg"
                 alt="foto2"
               />
             </div>
@@ -78,11 +76,11 @@ export default function Home() {
       <div className="min-h-[650px] bg-[#09090B]">
         <div className="ml-[300px] pt-24 ">
           <div className="grid gap-[620px] grid-cols-2">
-            <h2>
-              Our Newest products
-            </h2>
+            <h2>Our Newest products</h2>
             <div className="rounded-xl text-[#337DF6] flex justify-center items-center  hover:scale-105 transition h-9 w-28 bg-[#18181B]">
-              <Link href={"product/all"} className="font-bold text-lg">See All</Link>
+              <Link href={"product/all"} className="font-bold text-lg">
+                See All
+              </Link>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -99,22 +97,42 @@ export default function Home() {
               </svg>
             </div>
           </div>
-          <div className="flex flex-wrap gap-10 w-[1516px] ">
+          <div className="flex flex-wrap gap-10 w-[1516px]">
             <Link href={"/product/NikeAirVaporMax2023Flyknit1"}>
-            <Card img={Zapato2} name={"Nike Air VaporMax 2023 Flyknit"} price={"$200"} category={"Men"}/>
+              <Card
+                image="/image-6.jpg"
+                name={"Nike Air VaporMax 2023 Flyknit"}
+                price={"$200"}
+                category={"Men"}
+              />
             </Link>
 
-           <Link href={"/product/NikeSportswearClub2"}>
-           <Card img={Persona1} name={"Nike Sportswear Club"} price={"$50"} category={"Men"} />
-           </Link>
+            <Link href={"/product/NikeSportswearClub2"}>
+              <Card
+                image="/image-2.jpg"
+                name={"Nike Sportswear Club"}
+                price={"$50"}
+                category={"Men"}
+              />
+            </Link>
 
-           <Link href={"/product/NikeRevolution64"}>
-           <Card img={Zapato1} name={"Nike Revolution 6"} price={"$70"} category={"Women"} />
-           </Link>
+            <Link href={"/product/NikeRevolution64"}>
+              <Card
+                image="/image-4.jpg"
+                name={"Nike Revolution 6"}
+                price={"$70"}
+                category={"Women"}
+              />
+            </Link>
 
-           <Link href={"/product/NikeWindrunner3"}>
-           <Card img={Persona2} name={"Nike Windrunner"} price={"$200"} category={"Men"} /> 
-           </Link>
+            <Link href={"/product/NikeWindrunner3"}>
+              <Card
+                image="/image-5.jpg"
+                name={"Nike Windrunner"}
+                price={"$200"}
+                category={"Men"}
+              />
+            </Link>
           </div>
         </div>
       </div>
